@@ -47,7 +47,7 @@ class LList : public List<S> {
     public:
     // Constructor of new list
     LList() {
-        curr = head = tail = new Link<S>();
+        curr = tail = head = new Link<S>();
         count = 0;
     }
     // Put current cursor link to this new cell (with new data)
@@ -108,11 +108,11 @@ class LList : public List<S> {
         }
     }
     void display(int colWidth) {
-        cout << setfill('_') << setw(3*colWidth) << "_" << endl;
+        cout << setfill('_') << setw(4*colWidth) << "_" << endl;
         cout << setfill(' ') << fixed;
-        cout << setw(colWidth) << "No." << setw(colWidth) << "Student" << setw(colWidth) << 
+        cout << setw(colWidth) << "No." << setw(2*colWidth) << "Student" << setw(colWidth) << 
         "ID" << endl; 
-        cout << setfill('_') << setw(3*colWidth) << "_" << endl; 
+        cout << setfill('_') << setw(4*colWidth) << "_" << endl; 
         cout << setfill(' ') << fixed;
     }
     
@@ -139,6 +139,10 @@ class studentProcess {
     studentProcess();
     ~studentProcess();
     
-    void insertStudent(string name, const int id);
+    void initialize_ten_students();
+    int insertStudent(string name, const int id);
+    int removeStudent(string name);
+    string lowerCase(string input);
+    string upperCase(string input);
     void displayList();
 };

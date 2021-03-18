@@ -1,5 +1,4 @@
-# studentManagement
 
 <h1>Student Project Management</h1>
-Language: C++
-Structure used: Linked List
+<br>Language: C++
+<br>Structure used: Linked List
